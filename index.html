@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="blablabla" />
-    <title>Tangram</title>
-    <link rel="icon" href="favicon.ico" type="image/gif">
-    <link rel="stylesheet" href="style.css" />
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
-    <meta name="author" content="John Doe">
-  </head>
-  <body>
 
-    <header>
-        <ul>
-          <li>Maison</li>
-          <li>Lapin</li>
-          <li>Dromadaire</li>
-          <li>Requin</li>
-          <li>Bateau</li>
-          <li>Ours</li>
-          <li>Oie</li>
-          <li>Poisson</li>
-          <li>Chat</li>
-        </ul>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="blablabla" />
+  <title>Tangram</title>
+  <link rel="icon" href="favicon.ico" type="image/gif">
+  <script src="https://kit.fontawesome.com/4277d4280d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+  <meta name="author" content="John Doe">
+</head>
 
-    <div class="conteneur">
+<body>
 
-      <div class="tangram">
-        <span class="cyanTriangle"></span>
-        <span class="greenTriangle"></span>
-        <span class="blueTriangle"></span>
-        <span class="yellowSquare"></span>
-        <span class="orangeTriangle"></span>
-        <span class="redTriangle"></span>
-        <span class="purplePara"></span>
-      </div>
+  <header>
+    <i class="fas fa-bars" onclick="ouvreMenu()"></i>
+    <nav>
+      <ul>
+        <i class="fas fa-times" onclick="fermeMenu()"></i>
+        <li>Maison</li>
+        <li>Lapin</li>
+        <li>Dromadaire</li>
+        <li>Requin</li>
+        <li>Bateau</li>
+        <li>Ours</li>
+        <li>Oie</li>
+        <li>Poisson</li>
+        <li>Chat</li>
+      </ul>
+    </nav>
+  </header>
 
+  <div class="conteneur">
+
+    <div class="tangram">
+      <span class="cyanTriangle"></span>
+      <span class="greenTriangle"></span>
+      <span class="blueTriangle"></span>
+      <span class="yellowSquare"></span>
+      <span class="orangeTriangle"></span>
+      <span class="redTriangle"></span>
+      <span class="purplePara"></span>
     </div>
 
-  </body>
-  <script>
-  </script>
+  </div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  function ouvreMenu() {
+    $("nav").addClass("menupresent")
+  }
+
+  function fermeMenu() {
+    $("nav").removeClass("menupresent")
+  }
+</script>
+
 </html>

@@ -1,4 +1,5 @@
 /* Honteusement dérobé sur http://tangram.krabamms.de/ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -25,24 +26,30 @@ body {
   height: 100vh;
 }
 
+.fa-bars,
+.fa-times {
+  display: none;
+
+}
+
 header {
-  width:100%;
+  width: 100%;
   height: 80px;
   position: fixed;
   border-bottom: 3px solid #ddd;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #eee;
   z-index: 1;
-  justify-content: flex-end;
-  align-items: center;
   top: 0;
+  font-family: 'Roboto';
+}
+
+header nav {
+  height: 100%;
 }
 
 header ul {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   text-align: center;
   height: 100%;
 }
@@ -50,22 +57,20 @@ header ul {
 header ul li {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   justify-content: center;
-  list-style: none;
   height: 100%;
+  width: 100%;
   cursor: pointer;
 }
 
 header ul li:hover {
-  font-weight: bold;
+  font-weight: 700;
   background-color: #ddd;
 }
 
 .conteneur {
-  height: 500px;
-  width: 500px;
+  height: 100%;
+  width: 100%;
   background-color: #F0E7DF;
   display: flex;
   align-items: center;
@@ -134,4 +139,57 @@ header ul li:hover {
   height: 70px;
   position: absolute;
   transform: translate(45px, 146px) rotate(-45deg) skew(45deg);
+}
+
+@media screen and (max-width:768px) {
+
+  header {
+    background-color: unset;
+    border-bottom: unset;
+    box-shadow: unset;
+  }
+
+  .fa-bars {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 30px;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 3rem;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  nav {
+    width: 250px;
+    position: fixed;
+    left: -250px;
+    transition: 250ms linear all;
+    background-color: #eee;
+    border-right: 3px solid #ddd;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  nav ul li {
+    text-align: left;
+    padding-left: 30px;
+    height: 60px;
+  }
+
+  .menupresent {
+    left: 0;
+  }
 }

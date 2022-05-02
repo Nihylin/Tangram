@@ -1,13 +1,12 @@
+/* Honteusement dérobé sur http://tangram.krabamms.de/ */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-@media screen and (max-width:768px) {
-}
-
-* { background-color: rgba(255,0,0,.2); }
+/* * { background-color: rgba(255,0,0,.2); }
 * * { background-color: rgba(0,255,0,.2); }
 * * * { background-color: rgba(0,0,255,.2); }
 * * * * { background-color: rgba(255,0,255,.2); }
@@ -15,4 +14,124 @@
 * * * * * * { background-color: rgba(255,255,0,.2); }
 * * * * * * * { background-color: rgba(255,0,0,.2); }
 * * * * * * * * { background-color: rgba(0,255,0,.2); }
-* * * * * * * * * { background-color: rgba(0,0,255,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); } */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  width:100%;
+  height: 80px;
+  position: fixed;
+  border-bottom: 3px solid #ddd;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #eee;
+  z-index: 1;
+  justify-content: flex-end;
+  align-items: center;
+  top: 0;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+header ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  list-style: none;
+  height: 100%;
+  cursor: pointer;
+}
+
+header ul li:hover {
+  font-weight: bold;
+  background-color: #ddd;
+}
+
+.conteneur {
+  height: 500px;
+  width: 500px;
+  background-color: #F0E7DF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tangram {
+  position: relative;
+  height: 320px;
+  width: 320px;
+  /* background-color: rgba(255,101,80,0.3); */
+  padding: 50px 0 0 56px;
+}
+
+.cyanTriangle {
+  border-left: 100px solid #6ED0F7;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  position: absolute;
+  transform: translate(0, 0);
+}
+
+.greenTriangle {
+  border-left: 100px solid #70BF45;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  position: absolute;
+  transform: translate(54px, -52px) rotate(90deg);
+}
+
+.blueTriangle {
+  border-left: 50px solid #02478D;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  position: absolute;
+  transform: translate(79px, 79px) rotate(270deg);
+}
+
+.yellowSquare {
+  background-color: #FFC20F;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  transform: translate(122px, 66px) rotate(45deg);
+}
+
+.orangeTriangle {
+  border-left: 70px solid #F68121;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
+  position: absolute;
+  transform: translate(150px, 109px) rotate(45deg);
+}
+
+.redTriangle {
+  border-left: 50px solid #EB1B23;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  position: absolute;
+  transform: translate(160px, -2px) rotate(180deg);
+}
+
+.purplePara {
+  background-color: #ACAAD0;
+  width: 64px;
+  height: 70px;
+  position: absolute;
+  transform: translate(45px, 146px) rotate(-45deg) skew(45deg);
+}

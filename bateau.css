@@ -1,0 +1,32 @@
+
+.bateau .cyanTriangle {
+    transform:   translate(75%, -20%) rotate(-90deg);
+
+}
+
+.bateau .greenTriangle{
+    transform: translate(23%, -45%) rotate(0deg);
+}
+
+.bateau .blueTriangle{
+    
+    transform: translate(20px, 114px) rotate(45deg);
+}
+
+.bateau .yellowSquare{
+    transform: translate(92%, 160%)  rotate(0deg) ;
+}
+
+.bateau .orangeTriangle{
+    transform: translate(-63%, 54%) rotate(90deg);
+    
+}
+
+.bateau .redTriangle{
+    transform: translate(257%, 79%) rotate(225deg);
+}
+
+.bateau .purplePara{
+    transform: translate(273%, 158%) rotate(0deg) skew(-45deg);
+    
+}

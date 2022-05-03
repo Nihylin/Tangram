@@ -1,0 +1,21 @@
+.chat .blueTriangle {
+    transform: translate(24px, -77px) rotate(359deg);
+}
+.chat .redTriangle {
+    transform: translate(75px, -77px) rotate(180deg);
+}
+.chat .yellowSquare {
+    transform: translate(40px, -12px) rotate(44deg);
+}
+.chat .orangeTriangle {
+    transform: translate(58px, 22px) rotate(179deg);
+}
+.chat .cyanTriangle {
+    transform: translate(131px, 20px) rotate(-1deg);
+}
+.chat .greenTriangle {
+    transform: translate(150px, 125px) rotate(44deg);
+}
+.chat .purplePara {
+    transform: translate(276px, 201px) rotate(-45deg) skew(45deg);
+}

@@ -1,0 +1,21 @@
+.oie .redTriangle {
+    transform: translate(-54px, -15px) rotate(180deg);
+}
+.oie .purplePara {
+    transform: translate(-11px, 24px) rotate(-135deg) skew(45deg);
+}
+.oie .yellowSquare {
+    transform: translate(-39px, 99px) rotate(45deg);
+}
+.oie .blueTriangle {
+    transform: translate(-54px, 136px) rotate(0deg);
+}
+.oie .orangeTriangle {
+    transform: translate(-51px, 167px) rotate(-181deg);
+}
+.oie .greenTriangle {
+    transform: translate(9px, 170px) rotate(134deg);
+}
+.oie .cyanTriangle {
+    transform: translate(77px, 112px) rotate(89deg);
+}

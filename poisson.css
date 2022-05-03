@@ -1,0 +1,24 @@
+.poisson .greenTriangle{
+    transform: translate(-13px, -52px) rotate(45deg);
+}
+.poisson .cyanTriangle{
+    transform: translate(-13px, 19px) rotate(315deg);
+    
+}
+.poisson .redTriangle{
+    transform: translate(73px, -77px) rotate(180deg);
+}
+.poisson .orangeTriangle{
+    transform: translate(73px, -25px) rotate(0deg);
+}
+.poisson .purplePara{
+    transform: translate(76px, 78px) rotate(-90deg) skew(45deg);
+}
+
+.poisson .blueTriangle{
+    transform: translate(72px, 133px) rotate(180deg);
+}
+
+.poisson .yellowSquare{
+    transform: translate(159px, 47px) rotate(45deg);
+}

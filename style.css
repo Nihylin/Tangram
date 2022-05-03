@@ -93,6 +93,7 @@ header ul li:hover {
   border-bottom: 100px solid transparent;
   position: absolute;
   transform: translate(0, 0);
+  transition: all 2s;
 }
 
 .greenTriangle {
@@ -101,6 +102,7 @@ header ul li:hover {
   border-bottom: 100px solid transparent;
   position: absolute;
   transform: translate(54px, -52px) rotate(90deg);
+  transition: all 2s;
 }
 
 .blueTriangle {
@@ -109,6 +111,7 @@ header ul li:hover {
   border-bottom: 50px solid transparent;
   position: absolute;
   transform: translate(79px, 79px) rotate(270deg);
+  transition: all 2s;
 }
 
 .yellowSquare {
@@ -117,6 +120,7 @@ header ul li:hover {
   height: 70px;
   position: absolute;
   transform: translate(122px, 66px) rotate(45deg);
+  transition: all 2s;
 }
 
 .orangeTriangle {
@@ -125,6 +129,7 @@ header ul li:hover {
   border-bottom: 70px solid transparent;
   position: absolute;
   transform: translate(150px, 109px) rotate(45deg);
+  transition: all 2s;
 }
 
 .redTriangle {
@@ -133,6 +138,7 @@ header ul li:hover {
   border-bottom: 50px solid transparent;
   position: absolute;
   transform: translate(160px, -2px) rotate(180deg);
+  transition: all 2s;
 }
 
 .purplePara {
@@ -141,6 +147,7 @@ header ul li:hover {
   height: 70px;
   position: absolute;
   transform: translate(45px, 146px) rotate(-45deg) skew(45deg);
+  transition: all 2s;
 }
 
 @media screen and (max-width:768px) {

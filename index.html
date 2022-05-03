@@ -9,6 +9,15 @@
   <link rel="icon" href="favicon.ico" type="image/gif">
   <script src="https://kit.fontawesome.com/4277d4280d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="maison.css" />
+  <link rel="stylesheet" href="lapin.css" />
+  <link rel="stylesheet" href="dromadaire.css" />
+  <link rel="stylesheet" href="requin.css" />
+  <link rel="stylesheet" href="bateau.css" />
+  <link rel="stylesheet" href="ours.css" />
+  <link rel="stylesheet" href="oie.css" />
+  <link rel="stylesheet" href="poisson.css" />
+  <link rel="stylesheet" href="chat.css" />
   <meta name="robots" content="noindex, nofollow">
   <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
   <meta name="author" content="John Doe">
@@ -21,15 +30,16 @@
     <nav>
       <ul>
         <i class="fas fa-times" onclick="fermeMenu()"></i>
-        <li>Maison</li>
-        <li>Lapin</li>
-        <li>Dromadaire</li>
-        <li>Requin</li>
-        <li>Bateau</li>
-        <li>Ours</li>
-        <li>Oie</li>
-        <li>Poisson</li>
-        <li>Chat</li>
+        <li onclick="maison()">Maison</li>
+        <li onclick="lapin()">Lapin</li>
+        <li onclick="dromadaire()">Dromadaire</li>
+        <li onclick="requin()">Requin</li>
+        <li onclick="bateau()">Bateau</li>
+        <li onclick="ours()">Ours</li>
+        <li onclick="oie()">Oie</li>
+        <li onclick="poisson()">Poisson</li>
+        <li onclick="chat()">Chat</li>
+        <li onclick="reset()">Reset</li>
       </ul>
     </nav>
   </header>
@@ -59,6 +69,47 @@
   function fermeMenu() {
     $("nav").removeClass("menupresent")
   }
+
+  function maison() {
+    $(".tangram").removeClass("lapin dromadaire requin bateau ours oie poisson chat").addClass("maison")
+  }
+
+  function lapin() {
+    $(".tangram").removeClass("maison dromadaire requin bateau ours oie poisson chat").addClass("lapin")
+  }
+
+  function dromadaire() {
+    $(".tangram").removeClass("maison lapin requin bateau ours oie poisson chat").addClass("dromadaire")
+  }
+
+  function requin() {
+    $(".tangram").removeClass("maison lapin dromadaire bateau ours oie poisson chat").addClass("requin")
+  }
+
+  function bateau() {
+    $(".tangram").removeClass("maison lapin requin dromadaire ours oie poisson chat").addClass("bateau")
+  }
+
+  function ours() {
+    $(".tangram").removeClass("maison lapin dromadaire requin bateau oie poisson chat").addClass("ours")
+  }
+
+  function oie() {
+    $(".tangram").removeClass("maison lapin dromadaire requin bateau ours poisson chat").addClass("oie")
+  }
+
+  function poisson() {
+    $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie chat").addClass("poisson")
+  }
+
+  function chat() {
+    $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson").addClass("chat")
+  }
+
+  function reset() {
+    $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson chat")
+  }
+
 </script>
 
 </html>

@@ -1,0 +1,33 @@
+
+.ours .cyanTriangle {
+    transform:  translate(-7%, -18%) rotate(-135deg);
+
+}
+
+.ours .greenTriangle{
+    transform: translate(-95%, 14%) rotate(180deg);
+}
+
+.ours .blueTriangle{
+    
+    transform: translate(-48px, 179px) rotate(0deg);
+}
+
+.ours .yellowSquare{
+    transform:  translate(221%, 38%) rotate(0deg);
+}
+
+.ours .orangeTriangle{
+    transform: translate(133%, 23%) rotate(45deg);
+
+    
+}
+
+.ours .redTriangle{
+    transform: translate(439%, 29%) rotate(135deg);
+}
+
+.ours .purplePara{
+    transform:  translate(191%, 184%) rotate(0deg) skew(45deg);
+    
+}

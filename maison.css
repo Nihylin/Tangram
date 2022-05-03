@@ -1,0 +1,27 @@
+.maison .cyanTriangle {
+  transform: translate(100px, -70px) rotate(270deg);
+}
+
+.maison .greenTriangle {
+  transform: translate(50px, 31px) rotate(-90deg);
+}
+
+.maison .blueTriangle {
+  transform: translate(128px, 56px) rotate(90deg);
+}
+
+.maison .yellowSquare {
+  transform: translate(48px, -61px) rotate(0deg);
+}
+
+.maison .orangeTriangle {
+  transform: translate(-12px, 36px) rotate(225deg);
+}
+
+.maison .redTriangle {
+  transform: translate(153px, 82px) rotate(180deg);
+}
+
+.maison .purplePara {
+  transform: translate(19px, 10px) rotate(0deg) skew(-45deg);
+}

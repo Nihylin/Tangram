@@ -1,27 +1,27 @@
 .dromadaire .cyanTriangle {
-  transform: translate(57px, 19px);
+  transform: translate(57px, 59px);
 }
 
 .dromadaire .greenTriangle {
-  transform: translate(163px, 3px) rotate(-45deg);
+  transform: translate(166px, 45px) rotate(-45deg);
 }
 
 .dromadaire .blueTriangle {
-  transform: translate(6px, -84px) rotate(180deg);
+  transform: translate(6px, -44px) rotate(180deg);
 }
 
 .dromadaire .yellowSquare {
-  transform: translate(71px, -18px) rotate(45deg);
+  transform: translate(71px, 22px) rotate(45deg);
 }
 
 .dromadaire .orangeTriangle {
-  transform: translate(142px, -38px) rotate(-90deg);
+  transform: translate(142px, 3px) rotate(-90deg);
 }
 
 .dromadaire .redTriangle {
-  transform: translate(-20px, -110px) rotate(90deg);
+  transform: translate(-20px, -70px) rotate(90deg);
 }
 
 .dromadaire .purplePara {
-  transform: translate(1px, 9px) rotate(-135deg) skew(45deg);
+  transform: translate(1px, 49px) rotate(-135deg) skew(45deg);
 }

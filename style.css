@@ -1,10 +1,6 @@
 /* Honteusement dérobé sur http://tangram.krabamms.de/ */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-
-
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,9 +33,6 @@ body {
 
 body.dark {
   background-color: #121212;
-}
-
-body.dark header {
   color: white;
 }
 
@@ -102,6 +95,17 @@ header ul li:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  font-family: 'Roboto';
+}
+
+.conteneur input {
+  margin: 50px 0 0 0;
+  width: 135px;
+}
+
+.conteneur p {
+  margin: 10px 0px 0px 0px;
 }
 
 .tangram {

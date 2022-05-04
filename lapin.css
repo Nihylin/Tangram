@@ -1,0 +1,27 @@
+.lapin .cyanTriangle {
+  transform: translate(-11px, 59px) rotate(180deg);
+}
+
+.lapin .greenTriangle {
+  transform: translate(-25px, 171px) rotate(135deg)
+}
+
+.lapin .blueTriangle {
+  transform: translate(113px, 129px) rotate(225deg)
+}
+
+.lapin .yellowSquare {
+  transform: translate(106px, 20px) rotate(45deg);
+}
+
+.lapin .orangeTriangle {
+  transform: translate(82px, 64px) rotate(135deg)
+}
+
+.lapin .redTriangle {
+  transform: translate(219px, -16px) rotate(45deg);
+}
+
+.lapin .purplePara {
+  transform: translate(135px, -58px) rotate(-135deg) skew(45deg)
+}

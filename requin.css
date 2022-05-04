@@ -1,0 +1,34 @@
+
+.requin .cyanTriangle {
+    transform:  translate(-55%, 0%) rotate(-90deg) scale(.8) ;
+
+}
+
+.requin .greenTriangle{
+    transform: translate(30%, -7%) rotate(-45deg) scale(.8);
+}
+
+.requin .blueTriangle{
+    
+    transform: translate(149%, -8%)  rotate(135deg)  scale(.8);
+}
+
+.requin .yellowSquare{
+    transform: translate(147%, 73%)  rotate(0deg)  scale(.8);
+}
+
+.requin .orangeTriangle{
+    transform: translate(301%, -25%) rotate(135deg)  scale(.8);
+    
+}
+
+.requin .redTriangle{
+    transform: translate(27%, 112%)  rotate(90deg)  scale(.8);
+}
+
+.requin .purplePara{
+    transform: translate(257%, 33%) rotate(-90deg) skew(45deg)  scale(.8);
+    
+}
+
+

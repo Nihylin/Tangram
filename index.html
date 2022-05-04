@@ -83,43 +83,46 @@
     }
 
     function maison() {
-      $(".tangram").removeClass("lapin dromadaire requin bateau ours oie poisson chat").addClass("maison")
+      $(".tangram").removeClass("lapin dromadaire requin bateau ours oie poisson chat desordre").addClass("maison")
     }
 
     function lapin() {
-      $(".tangram").removeClass("maison dromadaire requin bateau ours oie poisson chat").addClass("lapin")
+      $(".tangram").removeClass("maison dromadaire requin bateau ours oie poisson chat desordre").addClass("lapin")
     }
 
     function dromadaire() {
-      $(".tangram").removeClass("maison lapin requin bateau ours oie poisson chat").addClass("dromadaire")
+      $(".tangram").removeClass("maison lapin requin bateau ours oie poisson chat desordre").addClass("dromadaire")
     }
 
     function requin() {
-      $(".tangram").removeClass("maison lapin dromadaire bateau ours oie poisson chat").addClass("requin")
+      $(".tangram").removeClass("maison lapin dromadaire bateau ours oie poisson chat desordre").addClass("requin")
     }
 
     function bateau() {
-      $(".tangram").removeClass("maison lapin requin dromadaire ours oie poisson chat").addClass("bateau")
+      $(".tangram").removeClass("maison lapin requin dromadaire ours oie poisson chat desordre").addClass("bateau")
     }
 
     function ours() {
-      $(".tangram").removeClass("maison lapin dromadaire requin bateau oie poisson chat").addClass("ours")
+      $(".tangram").removeClass("maison lapin dromadaire requin bateau oie poisson chat desordre").addClass("ours")
     }
 
     function oie() {
-      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours poisson chat").addClass("oie")
+      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours poisson chat desordre").addClass("oie")
     }
 
     function poisson() {
-      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie chat").addClass("poisson")
+      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie chat desordre").addClass("poisson")
     }
 
     function chat() {
-      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson").addClass("chat")
+      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson desordre").addClass("chat")
     }
 
     function reset() {
-      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson chat")
+      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson chat desordre")
+    }
+    function desordre() {
+      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson desordre").addClass("desordre")
     }
 
     $(document).on("change", ".switch", function () {

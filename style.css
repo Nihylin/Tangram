@@ -6,6 +6,34 @@
   margin: 0;
   padding: 0;
   --color-elem: #6ED0F7;
+
+  --cyan-posx: 0px;
+  --cyan-posy: 0px;
+  --cyan-angle: 0deg;
+
+  --green-posx: 54px;
+  --green-posy: -52px;
+  --green-angle: 90deg;
+
+  --blue-posx: 79px;
+  --blue-posy: 79px;
+  --blue-angle: 270deg;
+
+  --yellow-posx: 122px;
+  --yellow-posy: 66px;
+  --yellow-angle: 45deg;
+
+  --orange-posx: 150px;
+  --orange-posy: 109px;
+  --orange-angle: 45deg;
+
+  --red-posx: 160px;
+  --red-posy: -2px;
+  --red-angle: 180deg;
+
+  --purple-posx: 45px;
+  --purple-posy: 146px;
+  --purple-angle: -45deg;
 }
 
 /* * { background-color: rgba(255,0,0,.2); }
@@ -123,7 +151,7 @@ header ul li:hover {
   border-top: 100px solid transparent;
   border-bottom: 100px solid transparent;
   position: absolute;
-  transform: translate(0, 0);
+  transform: translate(var(--cyan-posx), var(--cyan-posy)) rotate(var(--cyan-angle)) ;
   transition: all 2s;
 }
 
@@ -132,7 +160,7 @@ header ul li:hover {
   border-top: 100px solid transparent;
   border-bottom: 100px solid transparent;
   position: absolute;
-  transform: translate(54px, -52px) rotate(90deg);
+  transform: translate(var(--green-posx), var(--green-posy)) rotate(var(--green-angle)) ;
   transition: all 2s;
 }
 
@@ -141,7 +169,7 @@ header ul li:hover {
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
   position: absolute;
-  transform: translate(79px, 79px) rotate(270deg);
+  transform: translate(var(--blue-posx), var(--blue-posy)) rotate(var(--blue-angle)) ;
   transition: all 2s;
 }
 
@@ -150,7 +178,7 @@ header ul li:hover {
   width: 70px;
   height: 70px;
   position: absolute;
-  transform: translate(122px, 66px) rotate(45deg);
+  transform: translate(var(--yellow-posx), var(--yellow-posy)) rotate(var(--yellow-angle)) ;
   transition: all 2s;
 }
 
@@ -159,7 +187,7 @@ header ul li:hover {
   border-top: 70px solid transparent;
   border-bottom: 70px solid transparent;
   position: absolute;
-  transform: translate(150px, 109px) rotate(45deg);
+  transform: translate(var(--orange-posx), var(--orange-posy)) rotate(var(--orange-angle)) ;
   transition: all 2s;
 }
 
@@ -168,7 +196,7 @@ header ul li:hover {
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
   position: absolute;
-  transform: translate(160px, -2px) rotate(180deg);
+  transform: translate(var(--red-posx), var(--red-posy)) rotate(var(--red-angle)) ;
   transition: all 2s;
 }
 
@@ -177,7 +205,7 @@ header ul li:hover {
   width: 64px;
   height: 70px;
   position: absolute;
-  transform: translate(45px, 146px) rotate(-45deg) skew(45deg);
+  transform: translate(var(--purple-posx), var(--purple-posy)) rotate(var(--purple-angle)) skew(45deg);
   transition: all 2s;
 }
 

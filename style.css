@@ -5,6 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  --color-elem: #6ED0F7;
 }
 
 /* * { background-color: rgba(255,0,0,.2); }
@@ -25,16 +26,13 @@ body {
   width: 100%;
   height: 100vh;
   transition: all 250ms ease;
-  background-color: #F0E7DF;
+  background-color: #F0E7DF ;
 }
 
 /************ THEME SOMBRE ************/
 
 body.dark {
   background-color: #121212;
-}
-
-body.dark header {
   color: white;
 }
 
@@ -97,6 +95,17 @@ header ul li:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  font-family: 'Roboto';
+}
+
+.conteneur input {
+  margin: 50px 0 0 0;
+  width: 135px;
+}
+
+.conteneur p {
+  margin: 10px 0px 0px 0px;
 }
 
 .tangram {
@@ -110,7 +119,7 @@ header ul li:hover {
 /************ STYLE FORMES ************/
 
 .cyanTriangle {
-  border-left: 100px solid #6ED0F7;
+  border-left: 100px solid var(--color-elem);
   border-top: 100px solid transparent;
   border-bottom: 100px solid transparent;
   position: absolute;
@@ -119,7 +128,7 @@ header ul li:hover {
 }
 
 .greenTriangle {
-  border-left: 100px solid #70BF45;
+  border-left: 100px solid var(--color-elem);
   border-top: 100px solid transparent;
   border-bottom: 100px solid transparent;
   position: absolute;
@@ -128,7 +137,7 @@ header ul li:hover {
 }
 
 .blueTriangle {
-  border-left: 50px solid #02478D;
+  border-left: 50px solid var(--color-elem);
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
   position: absolute;
@@ -137,7 +146,7 @@ header ul li:hover {
 }
 
 .yellowSquare {
-  background-color: #FFC20F;
+  background-color: var(--color-elem);
   width: 70px;
   height: 70px;
   position: absolute;
@@ -146,7 +155,7 @@ header ul li:hover {
 }
 
 .orangeTriangle {
-  border-left: 70px solid #F68121;
+  border-left: 70px solid var(--color-elem);
   border-top: 70px solid transparent;
   border-bottom: 70px solid transparent;
   position: absolute;
@@ -155,7 +164,7 @@ header ul li:hover {
 }
 
 .redTriangle {
-  border-left: 50px solid #EB1B23;
+  border-left: 50px solid var(--color-elem);
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
   position: absolute;
@@ -164,7 +173,7 @@ header ul li:hover {
 }
 
 .purplePara {
-  background-color: #ACAAD0;
+  background-color: var(--color-elem);
   width: 64px;
   height: 70px;
   position: absolute;

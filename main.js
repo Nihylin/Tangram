@@ -202,7 +202,7 @@ function updateFirst(e) {
 
         let i = 0;
         formes.forEach(function (f) {
-            console.log(i);
+            
             f.style.setProperty("--color-elem", hexToHSL(e.target.value, i));
             i += 30;
         });

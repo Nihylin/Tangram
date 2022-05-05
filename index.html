@@ -37,7 +37,6 @@
         <li onclick="chat()">Chat</li>
         <li onclick="random()">Désordre</li>
         <li onclick="reset()">Reset</li>
-        
       </ul>
     </nav>
   </header>
@@ -52,10 +51,13 @@
       <span id="forme" class="redTriangle"></span>
       <span id="forme" class="purplePara"></span>
     </div>
-    <input type="color" class="color" name="Theme" value="#3d1472" id="theme" />
-    <p>Changer la couleur</p>
   </div>
-  
+
+  <div class="colorpicker">
+    <i class="fa-solid fa-eye-dropper"></i>
+    <input type="color" class="color" name="Theme" value="#3d1472" id="theme" />
+  </div>
+
   <div class="toggle">
     <label class="switch" onchange="dark()">
       <i class="fas fa-moon"></i>

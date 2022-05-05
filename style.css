@@ -55,14 +55,25 @@ body {
   width: 100%;
   height: 100vh;
   transition: all 250ms ease;
-  background-color: #F0E7DF ;
+  background: linear-gradient(to right, #EBDEF0  0%, #9FA8DA 19%, #A9CCE3 40%, #FFCCBC  60%,#D6EAF8   83%, #EBDEF0 100%);
+  background-size: 10000px 100%;
+  animation: bg 15s linear infinite;
+}
+
+@keyframes bg {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 10000px;
+  }
 }
 
 /************ THEME SOMBRE ************/
 
 body.dark {
-  background-color: #121212;
-  color: white;
+  background: linear-gradient(to right,  #17202A 0%, #424949 33%,#1B2631   77%,  #17202A  100%);
+  color: white; 
 }
 
 body.dark header nav {
@@ -124,6 +135,7 @@ header ul li:hover {
 
 }
 
+
 .conteneur {
   height: 100%;
   width: 100%;
@@ -153,7 +165,7 @@ header ul li:hover {
   border-top: 100px solid transparent;
   border-bottom: 100px solid transparent;
   position: absolute;
-  transform: translate(var(--cyan-posx), var(--cyan-posy)) rotate(var(--cyan-angle)) ;
+  transform: translate(var(--cyan-posx), var(--cyan-posy)) rotate(var(--cyan-angle));
   transition: all 2s;
 }
 
@@ -162,7 +174,7 @@ header ul li:hover {
   border-top: 100px solid transparent;
   border-bottom: 100px solid transparent;
   position: absolute;
-  transform: translate(var(--green-posx), var(--green-posy)) rotate(var(--green-angle)) ;
+  transform: translate(var(--green-posx), var(--green-posy)) rotate(var(--green-angle));
   transition: all 2s;
 }
 
@@ -171,7 +183,7 @@ header ul li:hover {
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
   position: absolute;
-  transform: translate(var(--blue-posx), var(--blue-posy)) rotate(var(--blue-angle)) ;
+  transform: translate(var(--blue-posx), var(--blue-posy)) rotate(var(--blue-angle));
   transition: all 2s;
 }
 
@@ -180,7 +192,7 @@ header ul li:hover {
   width: 70px;
   height: 70px;
   position: absolute;
-  transform: translate(var(--yellow-posx), var(--yellow-posy)) rotate(var(--yellow-angle)) ;
+  transform: translate(var(--yellow-posx), var(--yellow-posy)) rotate(var(--yellow-angle));
   transition: all 2s;
 }
 
@@ -189,7 +201,7 @@ header ul li:hover {
   border-top: 70px solid transparent;
   border-bottom: 70px solid transparent;
   position: absolute;
-  transform: translate(var(--orange-posx), var(--orange-posy)) rotate(var(--orange-angle)) ;
+  transform: translate(var(--orange-posx), var(--orange-posy)) rotate(var(--orange-angle));
   transition: all 2s;
 }
 
@@ -198,7 +210,7 @@ header ul li:hover {
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
   position: absolute;
-  transform: translate(var(--red-posx), var(--red-posy)) rotate(var(--red-angle)) ;
+  transform: translate(var(--red-posx), var(--red-posy)) rotate(var(--red-angle));
   transition: all 2s;
 }
 
@@ -264,9 +276,9 @@ input[type="color"]::-webkit-color-swatch {
 
 .switch {
   position: absolute;
-  right:0;
-  bottom:0;
-  margin:20px;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
   display: inline-block;
   width: 60px;
   height: 34px;
@@ -302,11 +314,11 @@ input[type="color"]::-webkit-color-swatch {
   z-index: 2;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #696969;
 }
 
-input:checked + .slider::before {
+input:checked+.slider::before {
   transform: translateX(26px);
 }
 
@@ -378,4 +390,6 @@ input:checked + .slider::before {
     margin: 0 15px;
     height: 90%;
   }
+
+
 }

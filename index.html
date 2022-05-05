@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="blablabla" />
   <title>Tangram</title>
-  <link rel="icon" href="favicon.ico" type="image/gif">
   <script src="https://kit.fontawesome.com/4277d4280d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="maison.css" />
@@ -18,13 +17,10 @@
   <link rel="stylesheet" href="oie.css" />
   <link rel="stylesheet" href="poisson.css" />
   <link rel="stylesheet" href="chat.css" />
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
-  <meta name="author" content="John Doe">
 </head>
 
 <body>
-
+  
   <header>
     <i class="fas fa-bars" onclick="ouvreMenu()"></i>
     <nav>
@@ -44,8 +40,8 @@
       </ul>
     </nav>
   </header>
-
-  <div class="conteneur">
+  
+  <div class="conteneur" onclick="fermeMenu()">
     <div class="tangram">
       <span id="forme" class="cyanTriangle"></span>
       <span id="forme" class="greenTriangle"></span>
@@ -62,198 +58,14 @@
     <input type="color" class="color" name="Theme" value="#3d1472" id="theme" />
   </div>
 
-
   <div class="toggle">
-    <label class="switch">
+    <label class="switch" onchange="dark()">
       <i class="fas fa-moon"></i>
       <i class="fas fa-sun"></i>
       <input type="checkbox">
-      <span class="slider round"></span>
+      <span class="slider round" ></span>
     </label>
   </div>
-
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-    function ouvreMenu() {
-      $("nav").addClass("menupresent")
-    }
-
-    function fermeMenu() {
-      $("nav").removeClass("menupresent")
-    }
-
-    function maison() {
-      $(".tangram").removeClass("lapin dromadaire requin bateau ours oie poisson chat").addClass("maison")
-    }
-
-    function lapin() {
-      $(".tangram").removeClass("maison dromadaire requin bateau ours oie poisson chat").addClass("lapin")
-    }
-
-    function dromadaire() {
-      $(".tangram").removeClass("maison lapin requin bateau ours oie poisson chat").addClass("dromadaire")
-    }
-
-    function requin() {
-      $(".tangram").removeClass("maison lapin dromadaire bateau ours oie poisson chat").addClass("requin")
-    }
-
-    function bateau() {
-      $(".tangram").removeClass("maison lapin requin dromadaire ours oie poisson chat").addClass("bateau")
-    }
-
-    function ours() {
-      $(".tangram").removeClass("maison lapin dromadaire requin bateau oie poisson chat").addClass("ours")
-    }
-
-    function oie() {
-      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours poisson chat").addClass("oie")
-    }
-
-    function poisson() {
-      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie chat").addClass("poisson")
-    }
-
-    function chat() {
-      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson").addClass("chat")
-    }
-
-    function reset() {
-      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson chat");
-      $(".cyanTriangle").removeAttr("style");
-      $(".greenTriangle").removeAttr("style");
-      $(".blueTriangle").removeAttr("style");
-      $(".yellowSquare").removeAttr("style");
-      $(".orangeTriangle").removeAttr("style");
-      $(".redTriangle").removeAttr("style");
-      $(".purplePara").removeAttr("style");
-    }
-
-    function random(){
-      $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson chat");
-
-      var cyanRandX = Math.random() * (-150 - 150) + 150;
-      var cyanRandY = Math.random() * (-150 - 150) + 150;
-      var cyanRandAngle = Math.random() * (0 - 360) + 360;
-      var cyan = document.querySelector('.cyanTriangle');
-      cyan.style.setProperty('--cyan-posx', cyanRandX+'px');
-      cyan.style.setProperty('--cyan-posy', cyanRandY+'px');
-      cyan.style.setProperty('--cyan-angle', cyanRandAngle+'deg');
-
-      var greenRandX = Math.random() * (-150 - 150) + 150;
-      var greenRandY = Math.random() * (-150 - 150) + 150;
-      var greenRandAngle = Math.random() * (0 - 360) + 360;
-      var green = document.querySelector('.greenTriangle');
-      green.style.setProperty('--green-posx', greenRandX+'px');
-      green.style.setProperty('--green-posy', greenRandY+'px');
-      green.style.setProperty('--green-angle', greenRandAngle+'deg');
-
-      var blueRandX = Math.random() * (-150 - 150) + 150;
-      var blueRandY = Math.random() * (-150 - 150) + 150;
-      var blueRandAngle = Math.random() * (0 - 360) + 360;
-      var blue = document.querySelector('.blueTriangle');
-      blue.style.setProperty('--blue-posx', blueRandX+'px');
-      blue.style.setProperty('--blue-posy', blueRandY+'px');
-      blue.style.setProperty('--blue-angle', blueRandAngle+'deg');
-
-      var yellowRandX = Math.random() * (-150 - 150) + 150;
-      var yellowRandY = Math.random() * (-150 - 150) + 150;
-      var yellowRandAngle = Math.random() * (0 - 360) + 360;
-      var yellow = document.querySelector('.yellowSquare');
-      yellow.style.setProperty('--yellow-posx', yellowRandX+'px');
-      yellow.style.setProperty('--yellow-posy', yellowRandY+'px');
-      yellow.style.setProperty('--yellow-angle', yellowRandAngle+'deg');
-
-      var orangeRandX = Math.random() * (-150 - 150) + 150;
-      var orangeRandY = Math.random() * (-150 - 150) + 150;
-      var orangeRandAngle = Math.random() * (0 - 360) + 360;
-      var orange = document.querySelector('.orangeTriangle');
-      orange.style.setProperty('--orange-posx', orangeRandX+'px');
-      orange.style.setProperty('--orange-posy', orangeRandY+'px');
-      orange.style.setProperty('--orange-angle', orangeRandAngle+'deg');
-
-      var redRandX = Math.random() * (-150 - 150) + 150;
-      var redRandY = Math.random() * (-150 - 150) + 150;
-      var redRandAngle = Math.random() * (0 - 360) + 360;
-      var red = document.querySelector('.redTriangle');
-      red.style.setProperty('--red-posx', redRandX+'px');
-      red.style.setProperty('--red-posy', redRandY+'px');
-      red.style.setProperty('--red-angle', redRandAngle+'deg');
-
-      var purpleRandX = Math.random() * (-150 - 150) + 150;
-      var purpleRandY = Math.random() * (-150 - 150) + 150;
-      var purpleRandAngle = Math.random() * (0 - 360) + 360;
-      var purple = document.querySelector('.purplePara');
-      purple.style.setProperty('--purple-posx', purpleRandX+'px');
-      purple.style.setProperty('--purple-posy', purpleRandY+'px');
-      purple.style.setProperty('--purple-angle', purpleRandAngle+'deg');
-    }
-
-    $(document).on("change", ".switch", function() {
-      $("body").toggleClass("dark");
-    });
-
-    const color = document.getElementById('theme');
-    const formes = document.querySelectorAll("#forme");
-
-    function hexToHSL(H, incrementation) {
-      // Convert hex to RGB first
-
-      let r = 0,
-        g = 0,
-        b = 0;
-      if (H.length == 4) {
-        r = "0x" + H[1] + H[1];
-        g = "0x" + H[2] + H[2];
-        b = "0x" + H[3] + H[3];
-      } else if (H.length == 7) {
-        r = "0x" + H[1] + H[2];
-        g = "0x" + H[3] + H[4];
-        b = "0x" + H[5] + H[6];
-      }
-      // Then to HSL
-      r /= 255;
-      g /= 255;
-      b /= 255;
-      let cmin = Math.min(r, g, b),
-        cmax = Math.max(r, g, b),
-        delta = cmax - cmin,
-        h = 0,
-        s = 0,
-        l = 0;
-
-      if (delta == 0)
-        h = 0;
-      else if (cmax == r)
-        h = ((g - b) / delta) % 6;
-      else if (cmax == g)
-        h = (b - r) / delta + 2;
-      else
-        h = (r - g) / delta + 4;
-
-      h = Math.round(h * 60);
-
-      if (h < 0)
-        h += 360;
-
-      l = (cmax + cmin) / 2;
-      s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
-      s = +(s * 100).toFixed(1);
-      l = +(l * 100).toFixed(1);
-
-      return "hsl(" + (h + incrementation) + "," + s + "%," + l + "%)";
-    }
-
-    color.onchange = () => {
-      let i = 0;
-      formes.forEach(element => {
-        element.style.setProperty("--color-elem", hexToHSL(color.value, i));
-        i += 30;
-      });
-    };
-  </script>
-
+  <script src="./main.js"></script>
 </body>
-
-</html>

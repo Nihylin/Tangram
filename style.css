@@ -6,7 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  --color-elem: #6ED0F7;
+  
 
   --cyan-posx: 0px;
   --cyan-posy: 0px;
@@ -58,6 +58,7 @@ body {
   background: linear-gradient(to right, #EBDEF0  0%, #9FA8DA 19%, #A9CCE3 40%, #FFCCBC  60%,#D6EAF8   83%, #EBDEF0 100%);
   background-size: 10000px 100%;
   animation: bg 15s linear infinite;
+  --color-elem: #222222;
 }
 
 @keyframes bg {
@@ -72,8 +73,11 @@ body {
 /************ THEME SOMBRE ************/
 
 body.dark {
-  background: linear-gradient(to right,  #16011f  0%, #020722 25%, #061824 50%,#041827   75%, #16011f 100%);
+  background:radial-gradient(circle, rgba(0,51,88,1) 0%, rgba(0,48,55,1) 100%);
   color: white; 
+  animation: bg 40s linear infinite;
+  --color-elem: #fff;
+
 }
 
 body.dark header nav {

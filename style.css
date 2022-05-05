@@ -79,13 +79,8 @@ body.dark {
   --color-elem: #fff;
 }
 
-body.dark header nav {
-  border-bottom: 3px solid #222;
-  border-right: 3px solid #222;
-}
-
 body.dark header ul li:hover {
-  box-shadow: 0 1px 0 #fff;
+box-shadow: 0px 3px 0px rgba(255, 255, 255, 0.6);
 }
 
 body.dark .slider.round::before {
@@ -124,6 +119,16 @@ header ul {
   height: 100%;
 }
 
+header ul > li:first-of-type {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+header ul > li:last-child {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
 header ul li {
   display: flex;
   flex-direction: column;
@@ -131,13 +136,14 @@ header ul li {
   height: 100%;
   width: 100%;
   cursor: pointer;
-
-  border-radius: 25px;
+  transition: all linear 350ms;
+  backdrop-filter: blur(30px) saturate(80%) opacity(0);
 }
 
 header ul li:hover {
   font-weight: 700;
-  box-shadow: 0 1px 0 #000;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(30px) saturate(80%) opacity(1);
 }
 
 
@@ -235,14 +241,14 @@ header ul li:hover {
   right:0;
   bottom:40px;
   margin:20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .colorpicker i {
-  margin: 0 5px 0 0;
-  font-size: 25px;
+  font-size: 22px;
+  pointer-events: none;
+  position: absolute;
+  top: 6px;
+  left: 21px;
 }
 
 input[type="color"] {
@@ -389,6 +395,19 @@ input:checked+.slider::before {
     text-align: left;
     padding-left: 30px;
     height: 60px;
+    border-radius: 10px;
+  }
+
+  header ul > li:first-of-type {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  header ul > li:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; */
   }
 
   .menupresent {

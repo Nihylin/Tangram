@@ -179,10 +179,46 @@ function ouvreMenu() {
     return "hsl(" + (h + incrementation) + "," + s + "%," + l + "%)";
   }
 
-  color.onchange = () => {
-    let i = 0;
-    formes.forEach(element => {
-      element.style.setProperty("--color-elem", hexToHSL(color.value, i));
-      i += 30;
+//   color.onchange = () => {
+//     let i = 0;
+//     formes.forEach(element => {
+//       element.style.setProperty("--color-elem", hexToHSL(color.value, i));
+//       i += 30;
+//     });
+//   };
+
+let colorwell;
+let defaultColor = '#6ED0F7';
+window.addEventListener("load",startup,false);
+
+function startup() {
+    console.log('start');
+    colorwell = document.querySelector("#theme");
+    colorwell.value = defaultColor;
+    colorwell.addEventListener("input",updateFirst, false);
+    colorwell.addEventListener("change",updateAll, false);
+    
+}
+
+function updateFirst(e) {
+    
+  
+    if (formes) {
+        
+        let i= 0;
+        formes.forEach( function(f){
+            console.log(i);
+            f.style.setProperty("--color-elem", hexToHSL(e.target.value, i) );
+            i +=30;
+        });
+    }
+  }
+
+function updateAll(e) {
+    let i= 0;
+    formes.forEach( function(f){
+        
+        f.style.setProperty("--color-elem", hexToHSL(e.target.value, i) );
+        i +=30;
     });
-  };
+}

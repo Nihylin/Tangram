@@ -72,7 +72,7 @@ body {
 /************ THEME SOMBRE ************/
 
 body.dark {
-  background: linear-gradient(to right,  #17202A 0%, #424949 33%,#1B2631   77%,  #17202A  100%);
+  background: linear-gradient(to right,  #16011f  0%, #020722 25%, #061824 50%,#041827   75%, #16011f 100%);
   color: white; 
 }
 

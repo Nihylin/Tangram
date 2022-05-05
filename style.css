@@ -128,6 +128,7 @@ header ul li:hover {
   background-color: #ddd;
 }
 
+
 .conteneur {
   height: 100%;
   width: 100%;
@@ -162,7 +163,7 @@ header ul li:hover {
   border-top: 100px solid transparent;
   border-bottom: 100px solid transparent;
   position: absolute;
-  transform: translate(var(--cyan-posx), var(--cyan-posy)) rotate(var(--cyan-angle)) ;
+  transform: translate(var(--cyan-posx), var(--cyan-posy)) rotate(var(--cyan-angle));
   transition: all 2s;
 }
 
@@ -171,7 +172,7 @@ header ul li:hover {
   border-top: 100px solid transparent;
   border-bottom: 100px solid transparent;
   position: absolute;
-  transform: translate(var(--green-posx), var(--green-posy)) rotate(var(--green-angle)) ;
+  transform: translate(var(--green-posx), var(--green-posy)) rotate(var(--green-angle));
   transition: all 2s;
 }
 
@@ -180,7 +181,7 @@ header ul li:hover {
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
   position: absolute;
-  transform: translate(var(--blue-posx), var(--blue-posy)) rotate(var(--blue-angle)) ;
+  transform: translate(var(--blue-posx), var(--blue-posy)) rotate(var(--blue-angle));
   transition: all 2s;
 }
 
@@ -189,7 +190,7 @@ header ul li:hover {
   width: 70px;
   height: 70px;
   position: absolute;
-  transform: translate(var(--yellow-posx), var(--yellow-posy)) rotate(var(--yellow-angle)) ;
+  transform: translate(var(--yellow-posx), var(--yellow-posy)) rotate(var(--yellow-angle));
   transition: all 2s;
 }
 
@@ -198,7 +199,7 @@ header ul li:hover {
   border-top: 70px solid transparent;
   border-bottom: 70px solid transparent;
   position: absolute;
-  transform: translate(var(--orange-posx), var(--orange-posy)) rotate(var(--orange-angle)) ;
+  transform: translate(var(--orange-posx), var(--orange-posy)) rotate(var(--orange-angle));
   transition: all 2s;
 }
 
@@ -207,7 +208,7 @@ header ul li:hover {
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
   position: absolute;
-  transform: translate(var(--red-posx), var(--red-posy)) rotate(var(--red-angle)) ;
+  transform: translate(var(--red-posx), var(--red-posy)) rotate(var(--red-angle));
   transition: all 2s;
 }
 
@@ -240,9 +241,9 @@ header ul li:hover {
 
 .switch {
   position: absolute;
-  right:0;
-  bottom:0;
-  margin:20px;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
   display: inline-block;
   width: 60px;
   height: 34px;
@@ -278,11 +279,11 @@ header ul li:hover {
   z-index: 2;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #696969;
 }
 
-input:checked + .slider::before {
+input:checked+.slider::before {
   transform: translateX(26px);
 }
 
@@ -352,5 +353,8 @@ input:checked + .slider::before {
 
   .menupresent {
     left: 0;
+
   }
+
+
 }

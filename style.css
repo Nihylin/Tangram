@@ -1,5 +1,6 @@
 /* Honteusement dérobé sur http://tangram.krabamms.de/ */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -65,7 +66,6 @@ body.dark {
 }
 
 body.dark header nav {
-  background-color: #1E1E1E;
   border-bottom: 3px solid #222;
   border-right: 3px solid #222;
 }
@@ -85,16 +85,19 @@ header {
   width: 100%;
   height: 80px;
   position: fixed;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 1;
   top: 0;
-  font-family: 'Roboto';
+  font-family: 'Poppins';
+  padding: 10px;
 }
 
 header nav {
   height: 100%;
-  background-color: #eee;
-  border-bottom: 3px solid #ddd;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
 }
 
 header ul {
@@ -110,11 +113,15 @@ header ul li {
   height: 100%;
   width: 100%;
   cursor: pointer;
+
+  border-radius: 25px;
 }
 
 header ul li:hover {
   font-weight: 700;
-  background-color: #ddd;
+
+  box-shadow: 0 1px 0 #000;
+
 }
 
 .conteneur {
@@ -125,11 +132,6 @@ header ul li:hover {
   justify-content: center;
   flex-direction: column;
   font-family: 'Roboto';
-}
-
-.conteneur input {
-  margin: 50px 0 0 0;
-  width: 135px;
 }
 
 .conteneur p {
@@ -209,7 +211,40 @@ header ul li:hover {
   transition: all 2s;
 }
 
-/************ STYLE BOUTON THEME SOMBRE ************/
+/************ STYLE BOUTON THEME SOMBRE + COLOR PICKER ************/
+
+.colorpicker {
+  position: absolute;
+  right:0;
+  bottom:40px;
+  margin:20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colorpicker i {
+  margin: 0 5px 0 0;
+  font-size: 25px;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+	border: none;
+  border-radius: 34px;
+  width: 60px;
+  height: 34px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+  border-radius: 34px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+  border-radius: 34px;
+}
 
 .toggle .fas {
   position: absolute;
@@ -312,9 +347,9 @@ input:checked + .slider::before {
   .fa-times {
     display: block;
     position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 3rem;
+    top: 13px;
+    right: 27px;
+    font-size: 2rem;
     z-index: 1;
     cursor: pointer;
   }
@@ -330,7 +365,6 @@ input:checked + .slider::before {
 
   nav ul {
     flex-direction: column;
-    margin-top: 15px;
   }
 
   nav ul li {
@@ -341,5 +375,7 @@ input:checked + .slider::before {
 
   .menupresent {
     left: 0;
+    margin: 0 15px;
+    height: 90%;
   }
 }

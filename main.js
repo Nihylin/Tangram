@@ -1,57 +1,57 @@
 function ouvreMenu() {
     $("nav").addClass("menupresent")
-  }
+}
 
-  function fermeMenu() {
+function fermeMenu() {
     $("nav").removeClass("menupresent")
-  }
+}
 
-  function maison() {
+function maison() {
     $(".tangram").removeClass("lapin dromadaire requin bateau ours oie poisson chat desordre").addClass("maison")
     fermeMenu();
-  }
+}
 
-  function lapin() {
+function lapin() {
     $(".tangram").removeClass("maison dromadaire requin bateau ours oie poisson chat desordre").addClass("lapin")
     fermeMenu();
-  }
+}
 
-  function dromadaire() {
+function dromadaire() {
     $(".tangram").removeClass("maison lapin requin bateau ours oie poisson chat desordre").addClass("dromadaire")
     fermeMenu();
-  }
+}
 
-  function requin() {
+function requin() {
     $(".tangram").removeClass("maison lapin dromadaire bateau ours oie poisson chat desordre").addClass("requin")
     fermeMenu();
-  }
+}
 
-  function bateau() {
+function bateau() {
     $(".tangram").removeClass("maison lapin requin dromadaire ours oie poisson chat desordre").addClass("bateau")
     fermeMenu();
-  }
+}
 
-  function ours() {
+function ours() {
     $(".tangram").removeClass("maison lapin dromadaire requin bateau oie poisson chat desordre").addClass("ours")
     fermeMenu();
-  }
+}
 
-  function oie() {
+function oie() {
     $(".tangram").removeClass("maison lapin dromadaire requin bateau ours poisson chat desordre").addClass("oie")
     fermeMenu();
-  }
+}
 
-  function poisson() {
+function poisson() {
     $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie chat desordre").addClass("poisson")
     fermeMenu();
-  }
+}
 
-  function chat() {
+function chat() {
     $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson desordre").addClass("chat")
     fermeMenu();
-  }
+}
 
-  function reset() {
+function reset() {
     $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson chat");
     $(".cyanTriangle").removeAttr("style");
     $(".greenTriangle").removeAttr("style");
@@ -61,9 +61,9 @@ function ouvreMenu() {
     $(".redTriangle").removeAttr("style");
     $(".purplePara").removeAttr("style");
     fermeMenu();
-  }
+}
 
-  function random(){
+function random() {
     $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson chat");
     fermeMenu();
 
@@ -71,105 +71,105 @@ function ouvreMenu() {
     var cyanRandY = Math.random() * (-150 - 150) + 150;
     var cyanRandAngle = Math.random() * (0 - 360) + 360;
     var cyan = document.querySelector('.cyanTriangle');
-    cyan.style.setProperty('--cyan-posx', cyanRandX+'px');
-    cyan.style.setProperty('--cyan-posy', cyanRandY+'px');
-    cyan.style.setProperty('--cyan-angle', cyanRandAngle+'deg');
+    cyan.style.setProperty('--cyan-posx', cyanRandX + 'px');
+    cyan.style.setProperty('--cyan-posy', cyanRandY + 'px');
+    cyan.style.setProperty('--cyan-angle', cyanRandAngle + 'deg');
 
     var greenRandX = Math.random() * (-150 - 150) + 150;
     var greenRandY = Math.random() * (-150 - 150) + 150;
     var greenRandAngle = Math.random() * (0 - 360) + 360;
     var green = document.querySelector('.greenTriangle');
-    green.style.setProperty('--green-posx', greenRandX+'px');
-    green.style.setProperty('--green-posy', greenRandY+'px');
-    green.style.setProperty('--green-angle', greenRandAngle+'deg');
+    green.style.setProperty('--green-posx', greenRandX + 'px');
+    green.style.setProperty('--green-posy', greenRandY + 'px');
+    green.style.setProperty('--green-angle', greenRandAngle + 'deg');
 
     var blueRandX = Math.random() * (-150 - 150) + 150;
     var blueRandY = Math.random() * (-150 - 150) + 150;
     var blueRandAngle = Math.random() * (0 - 360) + 360;
     var blue = document.querySelector('.blueTriangle');
-    blue.style.setProperty('--blue-posx', blueRandX+'px');
-    blue.style.setProperty('--blue-posy', blueRandY+'px');
-    blue.style.setProperty('--blue-angle', blueRandAngle+'deg');
+    blue.style.setProperty('--blue-posx', blueRandX + 'px');
+    blue.style.setProperty('--blue-posy', blueRandY + 'px');
+    blue.style.setProperty('--blue-angle', blueRandAngle + 'deg');
 
     var yellowRandX = Math.random() * (-150 - 150) + 150;
     var yellowRandY = Math.random() * (-150 - 150) + 150;
     var yellowRandAngle = Math.random() * (0 - 360) + 360;
     var yellow = document.querySelector('.yellowSquare');
-    yellow.style.setProperty('--yellow-posx', yellowRandX+'px');
-    yellow.style.setProperty('--yellow-posy', yellowRandY+'px');
-    yellow.style.setProperty('--yellow-angle', yellowRandAngle+'deg');
+    yellow.style.setProperty('--yellow-posx', yellowRandX + 'px');
+    yellow.style.setProperty('--yellow-posy', yellowRandY + 'px');
+    yellow.style.setProperty('--yellow-angle', yellowRandAngle + 'deg');
 
     var orangeRandX = Math.random() * (-150 - 150) + 150;
     var orangeRandY = Math.random() * (-150 - 150) + 150;
     var orangeRandAngle = Math.random() * (0 - 360) + 360;
     var orange = document.querySelector('.orangeTriangle');
-    orange.style.setProperty('--orange-posx', orangeRandX+'px');
-    orange.style.setProperty('--orange-posy', orangeRandY+'px');
-    orange.style.setProperty('--orange-angle', orangeRandAngle+'deg');
+    orange.style.setProperty('--orange-posx', orangeRandX + 'px');
+    orange.style.setProperty('--orange-posy', orangeRandY + 'px');
+    orange.style.setProperty('--orange-angle', orangeRandAngle + 'deg');
 
     var redRandX = Math.random() * (-150 - 150) + 150;
     var redRandY = Math.random() * (-150 - 150) + 150;
     var redRandAngle = Math.random() * (0 - 360) + 360;
     var red = document.querySelector('.redTriangle');
-    red.style.setProperty('--red-posx', redRandX+'px');
-    red.style.setProperty('--red-posy', redRandY+'px');
-    red.style.setProperty('--red-angle', redRandAngle+'deg');
+    red.style.setProperty('--red-posx', redRandX + 'px');
+    red.style.setProperty('--red-posy', redRandY + 'px');
+    red.style.setProperty('--red-angle', redRandAngle + 'deg');
 
     var purpleRandX = Math.random() * (-150 - 150) + 150;
     var purpleRandY = Math.random() * (-150 - 150) + 150;
     var purpleRandAngle = Math.random() * (0 - 360) + 360;
     var purple = document.querySelector('.purplePara');
-    purple.style.setProperty('--purple-posx', purpleRandX+'px');
-    purple.style.setProperty('--purple-posy', purpleRandY+'px');
-    purple.style.setProperty('--purple-angle', purpleRandAngle+'deg');
-  }
+    purple.style.setProperty('--purple-posx', purpleRandX + 'px');
+    purple.style.setProperty('--purple-posy', purpleRandY + 'px');
+    purple.style.setProperty('--purple-angle', purpleRandAngle + 'deg');
+}
 
 
-  function dark(){
+function dark() {
     $("body").toggleClass("dark");
-  };
+};
 
-  const color = document.getElementById('theme');
-  const formes = document.querySelectorAll("#forme");
+const color = document.getElementById('theme');
+const formes = document.querySelectorAll("#forme");
 
-  function hexToHSL(H, incrementation) {
+function hexToHSL(H, incrementation) {
     // Convert hex to RGB first
     let r = 0,
-      g = 0,
-      b = 0;
+        g = 0,
+        b = 0;
     if (H.length == 4) {
-      r = "0x" + H[1] + H[1];
-      g = "0x" + H[2] + H[2];
-      b = "0x" + H[3] + H[3];
+        r = "0x" + H[1] + H[1];
+        g = "0x" + H[2] + H[2];
+        b = "0x" + H[3] + H[3];
     } else if (H.length == 7) {
-      r = "0x" + H[1] + H[2];
-      g = "0x" + H[3] + H[4];
-      b = "0x" + H[5] + H[6];
+        r = "0x" + H[1] + H[2];
+        g = "0x" + H[3] + H[4];
+        b = "0x" + H[5] + H[6];
     }
     // Then to HSL
     r /= 255;
     g /= 255;
     b /= 255;
     let cmin = Math.min(r, g, b),
-      cmax = Math.max(r, g, b),
-      delta = cmax - cmin,
-      h = 0,
-      s = 0,
-      l = 0;
+        cmax = Math.max(r, g, b),
+        delta = cmax - cmin,
+        h = 0,
+        s = 0,
+        l = 0;
 
     if (delta == 0)
-      h = 0;
+        h = 0;
     else if (cmax == r)
-      h = ((g - b) / delta) % 6;
+        h = ((g - b) / delta) % 6;
     else if (cmax == g)
-      h = (b - r) / delta + 2;
+        h = (b - r) / delta + 2;
     else
-      h = (r - g) / delta + 4;
+        h = (r - g) / delta + 4;
 
     h = Math.round(h * 60);
 
     if (h < 0)
-      h += 360;
+        h += 360;
 
     l = (cmax + cmin) / 2;
     s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
@@ -177,48 +177,43 @@ function ouvreMenu() {
     l = +(l * 100).toFixed(1);
 
     return "hsl(" + (h + incrementation) + "," + s + "%," + l + "%)";
-  }
+}
 
-//   color.onchange = () => {
-//     let i = 0;
-//     formes.forEach(element => {
-//       element.style.setProperty("--color-elem", hexToHSL(color.value, i));
-//       i += 30;
-//     });
-//   };
+
+
 
 let colorwell;
 let defaultColor = '#6ED0F7';
-window.addEventListener("load",startup,false);
+window.addEventListener("load", startup, false);
 
 function startup() {
-    console.log('start');
+    
     colorwell = document.querySelector("#theme");
     colorwell.value = defaultColor;
-    colorwell.addEventListener("input",updateFirst, false);
-    colorwell.addEventListener("change",updateAll, false);
-    
+    colorwell.addEventListener("input", updateFirst, false);
+    colorwell.addEventListener("change", updateAll, false);
+
 }
 
 function updateFirst(e) {
-    
-  
+
+
     if (formes) {
-        
-        let i= 0;
-        formes.forEach( function(f){
+
+        let i = 0;
+        formes.forEach(function (f) {
             console.log(i);
-            f.style.setProperty("--color-elem", hexToHSL(e.target.value, i) );
-            i +=30;
+            f.style.setProperty("--color-elem", hexToHSL(e.target.value, i));
+            i += 30;
         });
     }
-  }
+}
 
 function updateAll(e) {
-    let i= 0;
-    formes.forEach( function(f){
-        
-        f.style.setProperty("--color-elem", hexToHSL(e.target.value, i) );
-        i +=30;
+    let i = 0;
+    formes.forEach(function (f) {
+
+        f.style.setProperty("--color-elem", hexToHSL(e.target.value, i));
+        i += 30;
     });
 }

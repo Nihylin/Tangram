@@ -7,46 +7,55 @@ function fermeMenu() {
 }
 
 function maison() {
+    resetStyle();
     $(".tangram").removeClass("lapin dromadaire requin bateau ours oie poisson chat desordre").addClass("maison")
     fermeMenu();
 }
 
-function lapin() {
-    $(".tangram").removeClass("maison dromadaire requin bateau ours oie poisson chat desordre").addClass("lapin")
-    fermeMenu();
+function lapin(){
+resetStyle();
+$(".tangram").removeClass("maison dromadaire requin bateau ours oie poisson chat desordre").addClass("lapin")
+fermeMenu();
 }
 
 function dromadaire() {
+    resetStyle();
     $(".tangram").removeClass("maison lapin requin bateau ours oie poisson chat desordre").addClass("dromadaire")
     fermeMenu();
 }
 
-function requin() {
+function requin(){
+resetStyle(); 
     $(".tangram").removeClass("maison lapin dromadaire bateau ours oie poisson chat desordre").addClass("requin")
     fermeMenu();
 }
 
 function bateau() {
+    resetStyle();
     $(".tangram").removeClass("maison lapin requin dromadaire ours oie poisson chat desordre").addClass("bateau")
     fermeMenu();
 }
 
 function ours() {
+    resetStyle();
     $(".tangram").removeClass("maison lapin dromadaire requin bateau oie poisson chat desordre").addClass("ours")
     fermeMenu();
 }
 
 function oie() {
+    resetStyle();
     $(".tangram").removeClass("maison lapin dromadaire requin bateau ours poisson chat desordre").addClass("oie")
     fermeMenu();
 }
 
 function poisson() {
+    resetStyle();
     $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie chat desordre").addClass("poisson")
     fermeMenu();
 }
 
 function chat() {
+    resetStyle();
     $(".tangram").removeClass("maison lapin dromadaire requin bateau ours oie poisson desordre").addClass("chat")
     fermeMenu();
 }
@@ -61,6 +70,16 @@ function reset() {
     $(".redTriangle").removeAttr("style");
     $(".purplePara").removeAttr("style");
     fermeMenu();
+}
+
+function resetStyle() {
+    $(".cyanTriangle").removeAttr("style");
+    $(".greenTriangle").removeAttr("style");
+    $(".blueTriangle").removeAttr("style");
+    $(".yellowSquare").removeAttr("style");
+    $(".orangeTriangle").removeAttr("style");
+    $(".redTriangle").removeAttr("style");
+    $(".purplePara").removeAttr("style");
 }
 
 function random() {
@@ -187,7 +206,7 @@ let defaultColor = '#6ED0F7';
 window.addEventListener("load", startup, false);
 
 function startup() {
-    
+
     colorwell = document.querySelector("#theme");
     colorwell.value = defaultColor;
     colorwell.addEventListener("input", updateFirst, false);
@@ -202,7 +221,7 @@ function updateFirst(e) {
 
         let i = 0;
         formes.forEach(function (f) {
-            
+
             f.style.setProperty("--color-elem", hexToHSL(e.target.value, i));
             i += 30;
         });
@@ -217,3 +236,52 @@ function updateAll(e) {
         i += 30;
     });
 }
+
+
+(function (document) {
+    // Enable ECMAScript 5 strict mode within this function:
+    'use strict';
+
+    // Obtain a node list of all elements that have class="draggable":
+    let drag = document.getElementsByClassName('forme'),
+        draggableCount = drag.length, // cache the length
+        i; // iterator placeholder
+
+    // This function initializes the drag of an element where an
+    // event ("mousedown") has occurred:
+    function startDrag(evt) {
+
+        // The element's position is based on its top left corner,
+        // but the mouse coordinates are inside of it, so we need
+        // to calculate the positioning difference:
+        const diffX = evt.clientX - this.offsetLeft,
+            diffY = evt.clientY - this.offsetTop,
+            that = this; // "this" refers to the current element,
+        // let's keep it in cache for later use.
+
+        // moveAlong places the current element (referenced by "that")
+        // according to the current cursor position:
+        function moveAlong(evt) {
+            that.style.left = (evt.clientX - diffX) + 'px';
+            that.style.top = (evt.clientY - diffY) + 'px';
+        }
+
+        // stopDrag removes event listeners from the element,
+        // thus stopping the drag:
+        function stopDrag() {
+            document.removeEventListener('mousemove', moveAlong);
+            document.removeEventListener('mouseup', stopDrag);
+        }
+
+        document.addEventListener('mouseup', stopDrag);
+        document.addEventListener('mousemove', moveAlong);
+    }
+
+    // Now that all the variables and functions are created,
+    // we can go on and make the elements draggable by assigning
+    // a "startDrag" function to a "mousedown" event that occurs
+    // on those elements:
+    for (i = 0; i < draggableCount; i += 1) {
+        drag[i].addEventListener('mousedown', startDrag);
+    }
+}(document));
